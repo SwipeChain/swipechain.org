@@ -1,0 +1,71 @@
+.sxp
+    &-items
+        display: flex
+        flex-wrap: wrap
+        margin: -8px
+    &-item
+        width: calc(25% - 16px)
+        margin: 8px
+        border: 1px solid rgb(228, 228, 228)
+        border-radius: 6px
+        background-color: #fff
+        box-shadow: 0px 4px 13px 0px rgba(124, 124, 124, 0.13)
+        padding: 40px 10px 30px
+        text-align: center
+        transition: $tr
+        &:hover
+            transform: translateY(-10px)
+            box-shadow: 0px 8px 13px 0px rgba(124, 124, 124, 0.13)
+        +md
+            width: calc(50% - 16px)
+            padding: 50px 10px 30px
+        +xs
+            padding: 30px 10px
+        +mob
+            padding: 20px 10px
+        &__icon
+            width: 45px
+            height: 45px
+            border-radius: 50%
+            display: flex
+            align-items: center
+            justify-content: center
+            margin: 0 auto 14px
+            background-color: #fff9f8
+            +md
+                width: 55px
+                height: 55px
+                margin-bottom: 22px
+            +xs
+                width: 45px
+                height: 45px
+                margin-bottom: 15px
+            .icon
+                width: 28px
+                height: 28px
+                stroke: $primary
+                fill: none
+                +md
+                    width: 36px
+                    height: 36px
+                +xs
+                    width: 28px
+                    height: 28px
+    &-content
+        max-width: 860px
+        width: 100%
+        margin: 0 auto
+        +md
+            max-width: 520px
+    &-head
+        max-width: 550px
+        margin: 0 auto 80px
+        +md
+            max-width: 600px
+            margin-bottom: 50px
+        &__img
+            width: 94px
+            margin-bottom: 25px
+            &:last-child
+                margin-bottom: 0
+                

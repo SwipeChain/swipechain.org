@@ -1,0 +1,9 @@
+mixin icon(name)
+    svg(class='icon')
+        use(href='images/sprites/main.symbol.svg#image-' + name)
+
+mixin picture(img, ext, className)
+    picture(class=className)
+        source(srcset='images/'+img+'.webp' type='images/webp')
+        source(srcset='images/'+img+'.'+ext)
+        img(src='images/'+img+'.'+ext alt='')

@@ -1,0 +1,31 @@
+header.header
+    .container
+        .header-container
+            .header-logo
+                a.logo(href='#')
+                    img.logo__img(src='images/logo.svg' alt='swipechain')
+            .header-content
+                .header-menu
+                    ul.header-menu__list
+                        li.header-menu__item
+                            a.header-menu__link(href='#home') Home
+                        li.header-menu__item
+                            a.header-menu__link(href='#about') About
+                        li.header-menu__item
+                            a.header-menu__link(href='#sxp') SXP
+                        li.header-menu__item
+                            a.header-menu__link(href='#developers') Developers
+                        li.header-menu__item
+                            a.header-menu__link(href='#wallet') Wallet
+                        li.header-menu__item
+                            a.header-menu__link(href='https://explorer.Swipechain.org' target='_blank')
+                                span Explorer
+                                +icon('link')
+                    .header-menu__btn
+                        a.btn(href='https://swipechain.org/whitepaper.pdf' target='_blank') White Paper
+                .header-btn
+                    a.btn(href='https://swipechain.org/whitepaper.pdf' target='_blank') White Paper
+            .header-burger.js-header-burger
+                span
+                span
+                span

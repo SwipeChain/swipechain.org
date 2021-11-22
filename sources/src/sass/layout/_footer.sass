@@ -1,0 +1,152 @@
+.footer
+    background-color: #232323
+    color: #fff
+    margin-top: 80px
+    font-size: 14px
+    +md
+        margin-top: 100px
+    +sm
+        margin-top: 80px
+    +xs
+        margin-top: 40px
+    &-main
+        padding: 70px 0 60px
+        position: relative
+        &:after
+            content: ''
+            position: absolute
+            bottom: 0
+            left: -60px
+            right: -60px
+            background-color: rgb(44, 44, 44)
+            height: 1px
+            +r(1400px)
+                left: 0
+                right: 0
+        +md
+            padding: 60px 0 100px
+        +sm
+            padding: 60px 0
+        +xs
+            padding: 50px 0
+    &-menu
+        &__row
+            display: flex
+            flex-wrap: wrap
+            justify-content: space-between
+            +md
+                margin-bottom: -120px
+            +sm
+                margin-bottom: -80px
+            +xs
+                margin-bottom: -40px
+        &__col
+            min-width: 100px
+            padding-right: 20px
+            +md
+                width: 50%
+                margin-bottom: 120px
+            +sm
+                margin-bottom: 80px
+            +xs
+                margin-bottom: 50px
+                padding-right: 0
+        &__link
+            color: #8b8b8b
+            padding: 10px 0
+            display: inline-flex
+            align-items: center
+            &:hover
+                color: $primary
+            &.disabled
+                pointer-events: none
+            +md
+                font-size: 15px
+                padding: 13px 0
+            +sm
+                padding: 9px 0
+            +xs
+                font-size: 13px
+                padding: 7px 0
+            &-btn
+                margin-left: 5px
+                border: 1px solid #8b8b8b
+                color: #fff
+                font-size: 8px
+                padding: 3px 5px 2px
+                border-radius: 4px
+                display: inline-flex
+                align-items: center
+                justify-content: center
+                text-align: center
+        &__title
+            text-transform: uppercase
+            font-family: $a-r
+            margin-bottom: 33px
+            border-bottom: 1px dashed #fff
+            display: inline-flex
+            padding-bottom: 0.4em
+            +md
+                font-size: 18px
+                margin-bottom: 44px
+            +sm
+                margin-bottom: 30px
+            +xs
+                font-size: 14px
+                margin-bottom: 20px
+    &-logo
+        width: 140px
+        position: absolute
+        left: 0
+        top: 0
+        +md
+            position: static
+        +xs
+            width: 120px
+    &-bottom
+        margin-top: 130px
+        padding-bottom: 50px
+        display: flex
+        align-items: center
+        justify-content: center
+        position: relative
+        +md
+            margin-top: 100px
+            flex-wrap: wrap
+            justify-content: space-between
+        +sm
+            margin-top: 60px
+            padding-bottom: 30px
+    &-social
+        position: absolute
+        right: 0
+        top: 0
+        +md
+            position: static
+        &__list
+            display: flex
+            align-items: center
+        &__item
+            margin-right: 20px
+            &:last-child
+                margin-right: 0
+            +xs
+                margin-right: 15px
+        &__link
+            &:hover
+                .icon
+                    fill: $primary
+            .icon
+                width: 20px
+                height: 20px
+                fill: #8b8b8b
+                transition: $tr
+    &-copyright
+        text-align: center
+        font-size: 12px
+        line-height: 1.4
+        color: #8b8b8b
+        +md
+            width: 100%
+            order: 3
+            margin-top: 40px

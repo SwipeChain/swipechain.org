@@ -1,0 +1,59 @@
+.btn
+    color: #fff
+    background-color: $primary
+    padding: 12px 14px
+    border-radius: 8px
+    font-family: $a-h
+    font-size: 14px
+    display: inline-flex
+    align-items: center
+    justify-content: center
+    &:hover
+        background-color: #d82f00
+    +md
+        font-size: 19px
+        padding: 15px 20px
+    +sm
+        font-size: 14px
+        padding: 12px 14px
+    +xs
+        padding: 10px 12px
+        font-size: 13px
+    &--border
+        background-color: #fff
+        border: 1px solid rgb(231, 231, 231)
+        color: #000
+        &:hover
+            background-color: $primary
+            border-color: $primary
+            color: #fff
+            .icon
+                fill: #fff
+                transform: translateX(5px)
+        .icon
+            width: 11px
+            height: 11px
+            fill: $primary
+            margin-left: 5px
+            transition: $tr
+            +md
+                width: 18px
+                height: 18px
+            +sm
+                width: 11px
+                height: 11px
+    &--icon
+        &:hover
+            .icon
+                transform: none
+        .icon
+            width: 19px
+            height: 19px
+            margin-left: 10px
+            fill: #000
+            +md
+                width: 27px
+                height: 27px
+            +sm
+                width: 19px
+                height: 19px

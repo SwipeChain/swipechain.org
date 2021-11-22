@@ -1,0 +1,149 @@
+.header
+    position: relative
+    z-index: 10
+    &-container
+        display: flex
+        align-items: center
+        justify-content: space-between
+        padding: 14px 0
+        +md
+            justify-content: flex-start
+            padding: 8px 0
+        +sm
+            padding: 10px 0
+    &-logo
+        width: 202px
+        +md
+            width: 310px
+        +sm
+            width: 200px
+        +xs
+            width: 150px
+    &-btn
+        +xs
+            display: none
+    &-content
+        display: flex
+        align-items: center
+        +md
+            margin-left: auto
+    &-menu
+        margin-right: 30px
+        +md
+            position: absolute
+            top: 100%
+            left: 0
+            right: 0
+            background-color: #fff
+            margin: 0
+            padding: 20px 0
+            box-shadow: 0px 10px 13px 0px rgba(124, 124, 124, 0.13)
+            z-index: -1
+            opacity: 0
+            visibility: hidden
+            transition: $tr
+            &.active
+                opacity: 1
+                visibility: visible
+                z-index: 10
+        &__btn
+            display: none
+            +xs
+                display: block
+                margin: 15px auto 0
+                text-align: center
+        &__list
+            display: flex
+            align-items: center
+            +md
+                display: block
+                text-align: center
+        &__item
+            margin-right: 57px
+            &:last-child
+                margin-right: 0
+            +lg
+                margin-right: 40px
+            +md
+                margin: 0
+        &__link
+            display: inline-flex
+            align-items: center
+            font-size: 14px
+            font-family: $a-h
+            &:hover
+                color: $primary
+            +md
+                padding: 20px 0
+                font-size: 20px
+            +sm
+                padding: 15px 0
+                font-size: 16px
+            +xs
+                padding: 14px 0
+                font-size: 14px
+            .icon
+                width: 12px
+                height: 12px
+                fill: $primary
+                margin-left: 3px
+                +md
+                    width: 20px
+                    height: 20px
+                    margin-left: 7px
+                +sm
+                    width: 15px
+                    height: 15px
+                    margin-left: 5px
+                +xs
+                    width: 12px
+                    height: 12px
+                    margin-left: 3px
+    &-burger
+        display: none
+        position: relative
+        width: 60px
+        height: 52px
+        cursor: pointer
+        +md
+            display: block
+            margin-left: 20px
+            &.active
+                span
+                    &:nth-child(1)
+                        transform: rotate(45deg) translate(14px, 14px)
+                    &:nth-child(2)
+                        transform: translateX(-20px)
+                        opacity: 0
+                    &:nth-child(3)
+                        transform: rotate(-45deg) translate(16px, -16px)
+        +sm
+            width: 30px
+            height: 20px
+            &.active
+                span
+                    &:nth-child(1)
+                        transform: rotate(45deg) translate(7px, 7px)
+                    &:nth-child(2)
+                        transform: translateX(-10px)
+                        opacity: 0
+                    &:nth-child(3)
+                        transform: rotate(-45deg) translate(5px, -5px)
+        span
+            width: 100%
+            height: 10px
+            background-color: #000
+            position: absolute
+            left: 0
+            right: 0
+            transition: $tr
+            +sm
+                height: 3px
+            &:nth-child(1)
+                top: 0
+            &:nth-child(2)
+                top: 0
+                bottom: 0
+                margin: auto
+            &:nth-child(3)
+                bottom: 0

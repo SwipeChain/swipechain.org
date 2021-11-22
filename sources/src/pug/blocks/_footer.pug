@@ -1,0 +1,39 @@
+mixin menu(title, links)
+    .footer-menu__col
+        .footer-menu__title=title
+        ul.footer-menu__list
+            each link in links
+                li.footer-menu__item
+                    if(link.btn)
+                        a.footer-menu__link(href=link.link target='_blank' class='disabled')
+                            span=link.text
+                            span.footer-menu__link-btn Coming soon
+                    else
+                        a.footer-menu__link(href=link.link target='_blank')=link.text
+
+footer.footer
+    .container
+        .footer-main
+            .footer-menu
+                .footer-menu__row
+                    +menu('Swipe', [{text: 'About', link: '#about'}, {text: 'Explorer', link: 'https://explorer.Swipechain.org'}, {text: 'SXP', link: '#sxp'}, {text: 'Swipe Swap', link: 'https://swap.swipe.org'}, {text: 'Swipe.io', link: 'https://swipe.io '}, {text: 'White Paper', link: 'https://swipechain.org/whitepaper.pdf'}])
+                    +menu('Community', [{text: 'Blog', link: 'medium.com/Swipechain'}, {text: 'Twitter', link: 'Twitter.com/Swipechain_'}, {text: 'Telegram', link: 't.me/Swipechain'}, {text: 'Medium', link: 'medium.com/Swipechain'}])
+                    +menu('Downloads', [{text: 'Window Wallet', link: '#'}, {text: 'MacOS Wallet', link: '#'}, {text: 'Linux Wallet', link: '#'}, {text: 'iOS Wallet', link: '#', btn: true}, {text: 'Android Wallet', link: '#', btn: true}])
+                    +menu('Help', [{text: 'Docs', link: 'https://docs.Swipechain.org'}, {text: 'GitHub', link: 'https://GitHub.com/Swipechain'}, {text: 'Developers', link: '#developers'}, {text: 'Contact', link: 'mailto:help@swipechain.org'}])
+        .footer-bottom
+            .footer-logo
+                a.logo(href='#')
+                    img.logo__img(src='images/logo-footer.svg' alt='swipechain')
+            .footer-copyright
+                .footer-copyright__text © 2021 Developed by the Swipe Community. #[br]Licensed & open-source under the MIT License.
+            .footer-social
+                ul.footer-social__list
+                    li.footer-social__item
+                        a.footer-social__link(href='medium.com/Swipechain' target='_blank')
+                            +icon('medium')
+                    li.footer-social__item
+                        a.footer-social__link(href='#')
+                            +icon('facebook')
+                    li.footer-social__item
+                        a.footer-social__link(href='Twitter.com/Swipechain_' target='_blank')
+                            +icon('twitter')

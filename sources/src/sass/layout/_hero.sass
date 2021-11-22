@@ -1,0 +1,60 @@
+.hero
+    background-image: url('../images/hero-bg.png')
+    background-repeat: no-repeat
+    background-size: cover
+    background-position: center
+    padding: 80px 0
+    +sm
+        padding: 20px 0
+    &-logo
+        max-width: 360px
+        width: 100%
+        margin-bottom: 0px
+        +xs
+            max-width: 300px
+    &-btns
+        margin: -8px
+        +md
+            margin: 90px -12px -12px
+        +r(850px)
+            margin-top: 50px
+        +sm
+            margin-top: 40px
+        .btn
+            margin: 8px
+            +md
+                margin: 12px
+                padding: 15px 30px
+            +sm
+                padding: 12px 14px
+    &-container
+        +md
+            align-items: flex-start
+    &-img
+        +md
+            width: calc(100% + 200px)
+            max-width: inherit
+            margin-left: -155px
+        +r(850px)
+            width: calc(100% + 100px)
+            margin-left: -50px
+        +sm
+            width: 100%
+            margin: 0 auto
+            max-width: 500px
+            display: block
+    &-media
+        +md
+            width: 40%
+        +sm
+            width: 100%
+            margin-bottom: 10px
+    &-content
+        padding-top: 50px
+        +md
+            width: 60%
+        +r(850px)
+            padding-top: 0
+        +sm
+            width: 100%
+            text-align: center
