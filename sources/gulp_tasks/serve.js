@@ -5,7 +5,7 @@ gulp.task("serve", () => {
         .src(["./src/pdf/Whitepaper.pdf", "./src/Whitepaper.pdf"])
         .pipe(gulp.dest($.path.dest))
         .pipe(
-            $.debug({
+            debug({
             title: "static doc",
             })
         );
