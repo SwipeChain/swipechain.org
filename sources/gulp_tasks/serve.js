@@ -3,7 +3,7 @@ import gulp from "gulp";
 gulp.task("serve", () => {
         gulp
         .src(["./src/pdf/Whitepaper.pdf", "./src/Whitepaper.pdf"])
-        .pipe($.gulp.dest($.path.dest))
+        .pipe(gulp.dest($.path.dest))
         .pipe(
             $.debug({
             title: "static doc",
