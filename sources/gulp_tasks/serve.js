@@ -3,7 +3,7 @@ import debug from "gulp-debug";
 
 gulp.task("serve", () => {
         gulp
-        .src(["./src/Whitepaper.pdf"])
+        .src(["./src/Whitepaper.pdf", "./src/whitepaper.pdf", "./src/WhitePaper.pdf"])
         .pipe(gulp.dest($.path.dest))
         .pipe(
             debug({
